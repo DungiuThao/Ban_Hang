@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- ============================================================
+       SEO & META TAGS
+       Chỉnh sửa: title, description, keywords, og:image
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HẠNH HẢI Pharma – Đại lý Thuốc Uy Tín & Chất Lượng</title>
+  <meta name="description" content="PharmaCare – Mua thuốc, thực phẩm chức năng, vitamin chính hãng. Giao hàng nhanh, giá tốt, tư vấn tận tâm." />
+  <meta name="keywords" content="nhà thuốc, mua thuốc online, vitamin, thực phẩm chức năng, thuốc OTC" />
+  <meta name="author" content="Hạnh Hải" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="HẠNH HẢI Pharma – Đại lý Thuốc Uy Tín" />
+  <meta property="og:description" content="Mua thuốc & thực phẩm chức năng chính hãng, giao hàng toàn quốc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourusername.github.io" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200" />
+  <link rel="canonical" href="https://yourusername.github.io" />
+
+  <!-- ============================================================
+       GOOGLE FONTS
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+       CSS STYLES
+  ============================================================ -->
+  <style>
+    /* ── CSS Variables ── */
+    :root {
+      --green-dark:   #0D3321;
+      --green-mid:    #1A5C3A;
+      --green-light:  #2E8B57;
+      --gold:         #C9A84C;
+      --gold-light:   #E8C96B;
+      --cream:        #F7F3EC;
+      --white:        #FFFFFF;
+      --gray-50:      #F9FAFB;
+      --gray-100:     #F3F4F6;
+      --gray-200:     #E5E7EB;
+      --gray-400:     #9CA3AF;
+      --gray-600:     #4B5563;
+      --gray-800:     #1F2937;
+      --red:          #DC2626;
+      --shadow-sm:    0 1px 3px rgba(0,0,0,.08);
+      --shadow-md:    0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:    0 12px 40px rgba(0,0,0,.14);
+      --radius-sm:    6px;
+      --radius-md:    12px;
+      --radius-lg:    20px;
+      --transition:   .25s cubic-bezier(.4,0,.2,1);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--gray-800);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, textarea, select { font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--gray-100); }
+    ::-webkit-scrollbar-thumb { background: var(--green-mid); border-radius: 4px; }
+
+    /* ── Utility ── */
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+    .hidden { display: none !important; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+    /* ── Animate on scroll ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ════════════════════════════════════════
+       HEADER
+    ════════════════════════════════════════ */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition);
+    }
+    #header.scrolled { box-shadow: var(--shadow-md); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px; gap: 16px;
+    }
+    /* Logo */
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-size: 22px; font-weight: 700;
+      color: var(--green-dark); white-space: nowrap;
+    }
+    .logo-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    /* Nav */
+    .nav { display: flex; align-items: center; gap: 6px; }
+    .nav-link {
+      padding: 6px 14px; border-radius: var(--radius-sm);
+      font-size: 14px; font-weight: 500; color: var(--gray-600);
+      transition: background var(--transition), color var(--transition);
+    }
+    .nav-link:hover, .nav-link.active {
+      background: var(--cream); color: var(--green-dark);
+    }
+    /* Search bar */
+    .search-wrap {
+      flex: 1; max-width: 340px;
+      display: flex; align-items: center;
+      background: var(--gray-100); border-radius: 999px;
+      padding: 8px 16px; gap: 8px;
+      border: 1.5px solid transparent;
+      transition: border var(--transition), background var(--transition);
+    }
+    .search-wrap:focus-within {
+      border-color: var(--green-mid); background: var(--white);
+    }
+    .search-wrap input {
+      flex: 1; border: none; background: none; outline: none;
+      font-size: 14px; color: var(--gray-800);
+    }
+    .search-wrap input::placeholder { color: var(--gray-400); }
+    .search-icon { color: var(--gray-400); flex-shrink: 0; }
+    /* Header Actions */
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-600); transition: background var(--transition), color var(--transition);
+      position: relative; flex-shrink: 0;
+    }
+    .btn-icon:hover { background: var(--cream); color: var(--green-dark); }
+    .cart-badge {
+      position: absolute; top: 2px; right: 2px;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--green-mid); color: var(--white);
+      font-size: 10px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s;
+    }
+    .cart-badge.bump { animation: bump .3s ease; }
+    @keyframes bump { 0%,100%{transform:scale(1)} 50%{transform:scale(1.4)} }
+    /* Mobile menu btn */
+    .menu-btn { display: none; }
+    /* Mobile nav */
+    .mobile-nav {
+      display: none; position: fixed; inset: 68px 0 0;
+      background: var(--white); z-index: 999;
+      flex-direction: column; padding: 24px 20px; gap: 4px;
+      border-top: 1px solid var(--gray-200);
+      overflow-y: auto;
+    }
+    .mobile-nav.open { display: flex; animation: fadeInDown .22s ease; }
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:none} }
+    .mobile-nav .nav-link { padding: 12px 16px; border-radius: var(--radius-sm); font-size: 16px; }
+
+    /* ════════════════════════════════════════
+       HERO BANNER
+    ════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 68px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--green-dark) 0%, #1A5C3A 55%, #2d7a55 100%);
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,.06)'/%3E%3C/svg%3E") repeat;
+    }
+    .hero-img {
+      position: absolute; right: 0; bottom: 0; width: 50%; height: 100%;
+      object-fit: cover; opacity: .18;
+    }
+    .hero-content {
+      position: relative; z-index: 1; max-width: 600px;
+      padding: 80px 0;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(201,168,76,.2); border: 1px solid rgba(201,168,76,.4);
+      border-radius: 999px; padding: 5px 14px;
+      color: var(--gold-light); font-size: 12px; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: var(--font-display); font-size: clamp(38px,5vw,68px);
+      font-weight: 700; line-height: 1.1; color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--gold-light); }
+    .hero-desc {
+      font-size: 17px; color: rgba(255,255,255,.78);
+      max-width: 460px; margin-bottom: 36px; line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: var(--radius-sm);
+      background: var(--gold); color: var(--green-dark);
+      font-weight: 700; font-size: 15px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 16px rgba(201,168,76,.35);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light); transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,.45);
+    }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,.45); color: var(--white);
+      font-weight: 600; font-size: 15px;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+    .hero-stats {
+      display: flex; gap: 40px; margin-top: 60px;
+      padding-top: 40px; border-top: 1px solid rgba(255,255,255,.15);
+    }
+    .stat-item { color: var(--white); }
+    .stat-num {
+      font-family: var(--font-display); font-size: 32px; font-weight: 700;
+      color: var(--gold-light); line-height: 1;
+    }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 4px; }
+
+    /* ════════════════════════════════════════
+       SECTION HEADERS
+    ════════════════════════════════════════ */
+    .section { padding: 80px 0; }
+    .section-alt { background: var(--cream); }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-eyebrow {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--green-mid);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: clamp(28px,3.5vw,42px);
+      font-weight: 700; color: var(--green-dark); line-height: 1.15;
+    }
+    .section-desc {
+      margin-top: 12px; color: var(--gray-600); font-size: 16px; max-width: 520px; margin-inline: auto;
+    }
+    .divider {
+      width: 48px; height: 3px; border-radius: 2px;
+      background: linear-gradient(90deg, var(--green-mid), var(--gold));
+      margin: 16px auto 0;
+    }
+
+    /* ════════════════════════════════════════
+       CATEGORY FILTER
+    ════════════════════════════════════════ */
+    .filter-bar {
+      display: flex; align-items: center; gap: 8px;
+      flex-wrap: wrap; justify-content: center; margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 8px 20px; border-radius: 999px;
+      font-size: 13.5px; font-weight: 500;
+      border: 1.5px solid var(--gray-200); color: var(--gray-600);
+      transition: all var(--transition);
+    }
+    .filter-btn:hover { border-color: var(--green-mid); color: var(--green-mid); }
+    .filter-btn.active {
+      background: var(--green-dark); border-color: var(--green-dark);
+      color: var(--white);
+    }
+
+    /* ════════════════════════════════════════
+       PRODUCT GRID
+    ════════════════════════════════════════ */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .product-card {
+      background: var(--white); border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm); overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition);
+      cursor: pointer;
+      border: 1px solid var(--gray-200);
+    }
+    .product-card:hover {
+      box-shadow: var(--shadow-lg); transform: translateY(-4px);
+    }
+    .product-img-wrap {
+      position: relative; overflow: hidden; aspect-ratio: 4/3;
+      background: var(--cream);
+    }
+    .product-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.06); }
+    .product-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--green-mid); color: var(--white);
+      font-size: 11px; font-weight: 700; padding: 3px 10px;
+      border-radius: 999px; letter-spacing: .04em;
+    }
+    .product-badge.sale { background: var(--red); }
+    .product-body { padding: 18px; }
+    .product-cat {
+      font-size: 11px; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--green-mid); margin-bottom: 6px;
+    }
+    .product-name {
+      font-family: var(--font-display); font-size: 18px; font-weight: 700;
+      color: var(--green-dark); line-height: 1.3; margin-bottom: 6px;
+    }
+    .product-desc { font-size: 13px; color: var(--gray-600); margin-bottom: 14px; line-height: 1.5; }
+    .product-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .product-price {
+      font-size: 20px; font-weight: 700; color: var(--green-dark);
+      font-family: var(--font-display);
+    }
+    .product-price-old {
+      font-size: 13px; color: var(--gray-400); text-decoration: line-through;
+    }
+    .btn-add-cart {
+      display: flex; align-items: center; gap: 6px;
+      padding: 9px 16px; border-radius: var(--radius-sm);
+      background: var(--green-dark); color: var(--white);
+      font-size: 13px; font-weight: 600;
+      transition: background var(--transition), transform var(--transition);
+      white-space: nowrap;
+    }
+    .btn-add-cart:hover { background: var(--green-mid); transform: scale(1.03); }
+    .btn-add-cart:active { transform: scale(.97); }
+
+    /* ════════════════════════════════════════
+       FEATURES / WHY US
+    ════════════════════════════════════════ */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 32px 24px; text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition), border-color var(--transition);
+    }
+    .feature-card:hover { box-shadow: var(--shadow-md); border-color: var(--green-mid); }
+    .feature-icon {
+      width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 18px;
+      background: var(--cream); display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+    }
+    .feature-title { font-weight: 700; font-size: 16px; color: var(--green-dark); margin-bottom: 8px; }
+    .feature-desc { font-size: 13.5px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ════════════════════════════════════════
+       CART SIDEBAR
+    ════════════════════════════════════════ */
+    .cart-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.45);
+      z-index: 1100; opacity: 0; pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .cart-overlay.open { opacity: 1; pointer-events: auto; }
+    .cart-sidebar {
+      position: fixed; top: 0; right: 0; bottom: 0;
+      width: min(420px, 100vw);
+      background: var(--white); z-index: 1101;
+      display: flex; flex-direction: column;
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      box-shadow: -8px 0 40px rgba(0,0,0,.15);
+    }
+    .cart-sidebar.open { transform: none; }
+    .cart-header {
+      padding: 20px 24px; border-bottom: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .cart-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--green-dark); }
+    .cart-close {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-600); transition: background var(--transition);
+    }
+    .cart-close:hover { background: var(--gray-100); }
+    .cart-items { flex: 1; overflow-y: auto; padding: 16px 24px; }
+    .cart-empty {
+      text-align: center; padding: 60px 20px; color: var(--gray-400);
+    }
+    .cart-empty-icon { font-size: 48px; margin-bottom: 12px; opacity: .5; }
+    .cart-empty p { font-size: 15px; }
+    .cart-item {
+      display: flex; gap: 14px; padding: 14px 0;
+      border-bottom: 1px solid var(--gray-100);
+      align-items: flex-start;
+    }
+    .cart-item-img {
+      width: 70px; height: 70px; border-radius: var(--radius-sm);
+      object-fit: cover; flex-shrink: 0; background: var(--cream);
+    }
+    .cart-item-info { flex: 1; min-width: 0; }
+    .cart-item-name { font-weight: 600; font-size: 14px; color: var(--green-dark); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .cart-item-price { font-size: 15px; font-weight: 700; color: var(--green-mid); }
+    .cart-qty-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+    .qty-btn {
+      width: 28px; height: 28px; border-radius: 6px;
+      background: var(--gray-100); color: var(--gray-600);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: background var(--transition), color var(--transition);
+    }
+    .qty-btn:hover { background: var(--green-mid); color: var(--white); }
+    .qty-val { font-weight: 700; font-size: 15px; min-width: 24px; text-align: center; }
+    .cart-item-del {
+      color: var(--gray-400); transition: color var(--transition);
+      padding: 4px;
+    }
+    .cart-item-del:hover { color: var(--red); }
+    .cart-footer {
+      padding: 20px 24px; border-top: 1px solid var(--gray-200); flex-shrink: 0;
+    }
+    .cart-total-row {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 16px;
+    }
+    .cart-total-label { font-size: 15px; color: var(--gray-600); }
+    .cart-total-val {
+      font-family: var(--font-display); font-size: 24px;
+      font-weight: 700; color: var(--green-dark);
+    }
+    .btn-checkout {
+      width: 100%; padding: 15px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: var(--white); font-size: 15px; font-weight: 700;
+      transition: opacity var(--transition), transform var(--transition);
+      box-shadow: 0 4px 16px rgba(13,51,33,.25);
+    }
+    .btn-checkout:hover { opacity: .9; transform: translateY(-1px); }
+
+    /* ════════════════════════════════════════
+       PRODUCT DETAIL MODAL
+    ════════════════════════════════════════ */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.55);
+      z-index: 1200; display: flex; align-items: center; justify-content: center;
+      padding: 20px; opacity: 0; pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .modal-box {
+      background: var(--white); border-radius: var(--radius-lg);
+      width: 100%; max-width: 900px; max-height: 90vh; overflow-y: auto;
+      transform: scale(.95); transition: transform var(--transition);
+    }
+    .modal-overlay.open .modal-box { transform: scale(1); }
+    .modal-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .modal-gallery { padding: 28px; }
+    .modal-main-img {
+      width: 100%; aspect-ratio: 1; object-fit: cover;
+      border-radius: var(--radius-md); margin-bottom: 12px;
+    }
+    .modal-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .modal-thumb {
+      width: 64px; height: 64px; object-fit: cover;
+      border-radius: 8px; cursor: pointer;
+      border: 2.5px solid transparent;
+      transition: border-color var(--transition);
+    }
+    .modal-thumb.active { border-color: var(--green-mid); }
+    .modal-info { padding: 36px 32px 28px 8px; }
+    .modal-cat { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-mid); margin-bottom: 8px; }
+    .modal-name {
+      font-family: var(--font-display); font-size: 30px; font-weight: 700;
+      color: var(--green-dark); line-height: 1.2; margin-bottom: 12px;
+    }
+    .modal-price { font-size: 28px; font-weight: 700; color: var(--green-mid); font-family: var(--font-display); margin-bottom: 18px; }
+    .modal-desc { font-size: 14.5px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px; }
+    .modal-detail-list { margin-bottom: 24px; }
+    .modal-detail-list li { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--gray-600); padding: 5px 0; }
+    .modal-detail-list li::before { content: '✓'; color: var(--green-mid); font-weight: 700; }
+    .modal-qty-row { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .modal-qty-ctrl { display: flex; align-items: center; gap: 10px; background: var(--gray-100); border-radius: 8px; padding: 6px 12px; }
+    .modal-qty-ctrl .qty-btn { background: var(--white); }
+    .modal-qty-val { font-weight: 700; font-size: 18px; min-width: 30px; text-align: center; }
+    .btn-modal-cart {
+      flex: 1; padding: 14px; border-radius: var(--radius-sm);
+      background: var(--green-dark); color: var(--white);
+      font-weight: 700; font-size: 15px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-modal-cart:hover { background: var(--green-mid); transform: translateY(-1px); }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--white); display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-md); color: var(--gray-600);
+      transition: background var(--transition), color var(--transition); z-index: 10;
+    }
+    .modal-close:hover { background: var(--gray-100); color: var(--green-dark); }
+
+    /* ════════════════════════════════════════
+       ORDER FORM MODAL
+    ════════════════════════════════════════ */
+    .order-modal {
+      max-width: 640px;
+    }
+    .order-modal-inner { padding: 36px; }
+    .order-modal-title {
+      font-family: var(--font-display); font-size: 28px; font-weight: 700;
+      color: var(--green-dark); margin-bottom: 6px;
+    }
+    .order-modal-sub { font-size: 14px; color: var(--gray-600); margin-bottom: 28px; }
+    .form-row { margin-bottom: 16px; }
+    .form-row label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
+    .form-row input, .form-row textarea, .form-row select {
+      width: 100%; padding: 11px 14px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--gray-200); font-size: 14px; color: var(--gray-800);
+      background: var(--white); outline: none;
+      transition: border-color var(--transition);
+    }
+    .form-row input:focus, .form-row textarea:focus { border-color: var(--green-mid); }
+    .form-row textarea { resize: vertical; min-height: 80px; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .order-summary-box {
+      background: var(--cream); border-radius: var(--radius-md);
+      padding: 18px; margin: 20px 0;
+    }
+    .order-summary-title { font-weight: 700; font-size: 14px; color: var(--green-dark); margin-bottom: 12px; }
+    .order-sum-item { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--gray-600); padding: 5px 0; border-bottom: 1px solid var(--gray-200); }
+    .order-sum-item:last-of-type { border-bottom: none; }
+    .order-total-row { display: flex; justify-content: space-between; padding-top: 12px; border-top: 1.5px solid var(--green-mid); margin-top: 4px; }
+    .order-total-label { font-weight: 700; font-size: 15px; color: var(--green-dark); }
+    .order-total-val { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--green-mid); }
+    .btn-submit-order {
+      width: 100%; padding: 15px; border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      color: var(--white); font-size: 16px; font-weight: 700;
+      transition: opacity var(--transition); box-shadow: 0 4px 16px rgba(13,51,33,.25);
+      margin-top: 4px;
+    }
+    .btn-submit-order:hover { opacity: .9; }
+    .btn-submit-order:disabled { opacity: .6; cursor: not-allowed; }
+
+    /* ════════════════════════════════════════
+       PAYMENT MODAL
+    ════════════════════════════════════════ */
+    .payment-modal { max-width: 480px; }
+    .payment-inner { padding: 36px; text-align: center; }
+    .payment-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .payment-sub { font-size: 14px; color: var(--gray-600); margin-bottom: 24px; }
+    .qr-wrap {
+      width: 200px; height: 200px; margin: 0 auto 20px;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-md); border: 4px solid var(--white);
+      outline: 2px solid var(--green-mid);
+    }
+    .qr-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .bank-info {
+      background: var(--cream); border-radius: var(--radius-md);
+      padding: 18px; text-align: left; margin-bottom: 20px;
+    }
+    .bank-info-row { display: flex; justify-content: space-between; font-size: 13.5px; padding: 6px 0; border-bottom: 1px solid var(--gray-200); }
+    .bank-info-row:last-child { border-bottom: none; }
+    .bank-info-label { color: var(--gray-600); }
+    .bank-info-val { font-weight: 700; color: var(--green-dark); }
+    .copy-btn {
+      font-size: 12px; color: var(--green-mid); font-weight: 600;
+      padding: 2px 8px; border: 1px solid var(--green-mid);
+      border-radius: 4px; cursor: pointer; transition: background var(--transition), color var(--transition);
+    }
+    .copy-btn:hover { background: var(--green-mid); color: var(--white); }
+    .payment-note { font-size: 13px; color: var(--gray-500); font-style: italic; margin-bottom: 20px; }
+    .btn-confirm-paid {
+      width: 100%; padding: 14px; border-radius: var(--radius-sm);
+      background: var(--gold); color: var(--green-dark);
+      font-size: 15px; font-weight: 700;
+      transition: background var(--transition);
+      box-shadow: 0 4px 16px rgba(201,168,76,.35);
+    }
+    .btn-confirm-paid:hover { background: var(--gold-light); }
+
+    /* ════════════════════════════════════════
+       SUCCESS MODAL
+    ════════════════════════════════════════ */
+    .success-modal { max-width: 440px; }
+    .success-inner { padding: 48px 36px; text-align: center; }
+    .success-icon {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; font-size: 36px;
+      box-shadow: 0 8px 24px rgba(13,51,33,.3);
+      animation: popIn .5s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes popIn { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+    .success-title { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--green-dark); margin-bottom: 10px; }
+    .success-desc { font-size: 14.5px; color: var(--gray-600); line-height: 1.7; margin-bottom: 28px; }
+    .success-order-id { font-size: 13px; color: var(--gray-500); font-family: monospace; margin-bottom: 24px; }
+    .success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-print {
+      padding: 11px 22px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--green-mid); color: var(--green-mid);
+      font-weight: 600; font-size: 14px;
+      transition: background var(--transition), color var(--transition);
+    }
+    .btn-print:hover { background: var(--green-mid); color: var(--white); }
+    .btn-continue {
+      padding: 11px 22px; border-radius: var(--radius-sm);
+      background: var(--green-dark); color: var(--white);
+      font-weight: 600; font-size: 14px;
+      transition: background var(--transition);
+    }
+    .btn-continue:hover { background: var(--green-mid); }
+
+    /* ════════════════════════════════════════
+       HISTORY MODAL
+    ════════════════════════════════════════ */
+    .history-modal { max-width: 720px; }
+    .history-inner { padding: 32px; }
+    .history-title { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--green-dark); margin-bottom: 20px; }
+    .history-empty { text-align: center; padding: 40px; color: var(--gray-400); }
+    .history-item {
+      border: 1px solid var(--gray-200); border-radius: var(--radius-md);
+      padding: 18px; margin-bottom: 14px;
+      transition: box-shadow var(--transition);
+    }
+    .history-item:hover { box-shadow: var(--shadow-sm); }
+    .history-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .history-id { font-size: 12px; font-family: monospace; color: var(--gray-500); }
+    .history-date { font-size: 12px; color: var(--gray-500); }
+    .history-status { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: #D1FAE5; color: #065F46; }
+    .history-products { font-size: 13.5px; color: var(--gray-600); margin-bottom: 8px; }
+    .history-total { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--green-dark); }
+    .history-actions { display: flex; gap: 8px; margin-top: 10px; }
+    .btn-sm {
+      padding: 6px 14px; font-size: 12.5px; font-weight: 600; border-radius: 6px;
+      border: 1px solid var(--green-mid); color: var(--green-mid);
+      transition: background var(--transition), color var(--transition);
+    }
+    .btn-sm:hover { background: var(--green-mid); color: var(--white); }
+
+    /* ════════════════════════════════════════
+       TOAST NOTIFICATION
+    ════════════════════════════════════════ */
+    #toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 2000;
+      display: flex; align-items: center; gap: 12px;
+      background: var(--green-dark); color: var(--white);
+      padding: 14px 20px; border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg); max-width: 320px;
+      transform: translateY(80px); opacity: 0;
+      transition: transform .35s cubic-bezier(.4,0,.2,1), opacity .35s;
+      pointer-events: none;
+    }
+    #toast.show { transform: none; opacity: 1; pointer-events: auto; }
+    .toast-icon { font-size: 20px; flex-shrink: 0; }
+    .toast-text { font-size: 14px; font-weight: 500; }
+
+    /* ════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════ */
+    footer {
+      background: var(--green-dark); color: rgba(255,255,255,.8);
+      padding: 60px 0 0;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px; padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .footer-brand .logo { color: var(--white); margin-bottom: 14px; }
+    .footer-brand p { font-size: 13.5px; line-height: 1.7; max-width: 240px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 18px; }
+    .social-link {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: background var(--transition), transform var(--transition);
+    }
+    .social-link:hover { background: var(--gold); transform: translateY(-2px); }
+    .footer-col h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a { font-size: 13.5px; transition: color var(--transition); }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 10px; padding: 20px 0;
+      font-size: 13px; color: rgba(255,255,255,.45);
+    }
+
+    /* ════════════════════════════════════════
+       LOADING SPINNER
+    ════════════════════════════════════════ */
+    .spinner {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2.5px solid rgba(255,255,255,.3);
+      border-top-color: var(--white);
+      animation: spin .7s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ════════════════════════════════════════
+       PRINT STYLES
+    ════════════════════════════════════════ */
+    @media print {
+      #header, #cart-overlay, #cart-sidebar, footer, .no-print { display: none !important; }
+      body { font-size: 13px; }
+      .print-invoice { display: block !important; }
+    }
+    .print-invoice { display: none; }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .menu-btn { display: flex; }
+      .search-wrap { display: none; }
+      .section { padding: 56px 0; }
+      .modal-inner { grid-template-columns: 1fr; }
+      .modal-info { padding: 20px 24px 28px; }
+      .form-grid-2 { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size: 32px; }
+      .hero-stats { display: none; }
+      .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .product-body { padding: 12px; }
+      .product-name { font-size: 14px; }
+      .btn-add-cart { padding: 8px 10px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo" onclick="scrollToSection('hero')">
+        <div class="logo-icon">💊</div>
+        PharmaCare
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav">
+        <a href="#" class="nav-link" onclick="scrollToSection('hero')">Trang chủ</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('products')">Sản phẩm</a>
+        <a href="#" class="nav-link" onclick="scrollToSection('features')">Về chúng tôi</a>
+        <a href="#" class="nav-link" onclick="showHistoryModal()">Lịch sử</a>
+      </nav>
+
+      <!-- Search -->
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." oninput="filterProducts()" />
+      </div>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <!-- Mobile search btn -->
+        <button class="btn-icon" id="mobileSearchBtn" onclick="toggleMobileSearch()" title="Tìm kiếm">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <!-- Cart btn -->
+        <button class="btn-icon" onclick="openCart()" title="Giỏ hàng">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <!-- Mobile menu -->
+        <button class="btn-icon menu-btn" onclick="toggleMobileNav()" title="Menu">
+          <svg id="menuIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile search bar (hidden by default) -->
+    <div id="mobileSearchBar" class="hidden" style="padding: 10px 0;">
+      <div class="search-wrap" style="max-width:100%">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="mobileSearchInput" placeholder="Tìm sản phẩm..." oninput="filterProductsMobile()" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav id="mobileNav" class="mobile-nav">
+  <a href="#" class="nav-link" onclick="scrollToSection('hero'); closeMobileNav()">🏠 Trang chủ</a>
+  <a href="#" class="nav-link" onclick="scrollToSection('products'); closeMobileNav()">💊 Sản phẩm</a>
+  <a href="#" class="nav-link" onclick="scrollToSection('features'); closeMobileNav()">ℹ️ Về chúng tôi</a>
+  <a href="#" class="nav-link" onclick="showHistoryModal(); closeMobileNav()">📋 Lịch sử đơn hàng</a>
+</nav>
+
+<!-- ============================================================
+     HERO BANNER
+============================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">✦ Đại lý thuốc uy tín hàng đầu</div>
+      <h1 class="hero-title">
+        Sức khỏe của bạn<br />
+        là <span>ưu tiên</span><br />
+        của chúng tôi
+      </h1>
+      <p class="hero-desc">
+        Cung cấp thuốc, thực phẩm chức năng và vitamin chính hãng.
+        Đội ngũ dược sĩ tư vấn tận tâm — giao hàng toàn quốc.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary" onclick="scrollToSection('products')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Mua ngay
+        </a>
+        <a href="#" class="btn-outline" onclick="scrollToSection('features')">
+          Tìm hiểu thêm →
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Sản phẩm chính hãng</div></div>
+        <div class="stat-item"><div class="stat-num">10K+</div><div class="stat-label">Khách hàng tin dùng</div></div>
+        <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Tư vấn hỗ trợ</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURES / WHY US
+============================================================ -->
+<section id="features" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Tại sao chọn chúng tôi</span>
+      <h2 class="section-title">Cam kết chất lượng<br/>từng sản phẩm</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🏆</div>
+        <h3 class="feature-title">Chính hãng 100%</h3>
+        <p class="feature-desc">Toàn bộ sản phẩm có nguồn gốc rõ ràng, giấy phép lưu hành hợp lệ từ Bộ Y tế.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🚚</div>
+        <h3 class="feature-title">Giao hàng nhanh</h3>
+        <p class="feature-desc">Giao hàng trong ngày nội thành, 1–2 ngày toàn quốc. Đóng gói kín đáo, an toàn.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">👨‍⚕️</div>
+        <h3 class="feature-title">Dược sĩ tư vấn</h3>
+        <p class="feature-desc">Đội ngũ dược sĩ chuyên nghiệp sẵn sàng tư vấn miễn phí qua điện thoại & chat.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">💰</div>
+        <h3 class="feature-title">Giá cạnh tranh</h3>
+        <p class="feature-desc">Cam kết giá tốt nhất thị trường. Hoàn tiền nếu tìm được giá rẻ hơn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS SECTION
+============================================================ -->
+<section id="products" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Sản phẩm nổi bật</span>
+      <h2 class="section-title">Chăm sóc sức khỏe<br/>toàn diện</h2>
+      <div class="divider"></div>
+      <p class="section-desc">Chọn từ hàng trăm sản phẩm được kiểm định chất lượng nghiêm ngặt</p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-cat="all" onclick="setCategory('all', this)">Tất cả</button>
+      <button class="filter-btn" data-cat="vitamin" onclick="setCategory('vitamin', this)">Vitamin & Khoáng chất</button>
+      <button class="filter-btn" data-cat="otc" onclick="setCategory('otc', this)">Thuốc OTC</button>
+      <button class="filter-btn" data-cat="supplement" onclick="setCategory('supplement', this)">Thực phẩm chức năng</button>
+      <button class="filter-btn" data-cat="digestive" onclick="setCategory('digestive', this)">Tiêu hóa</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CART SIDEBAR
+============================================================ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <span class="cart-title">🛒 Giỏ hàng</span>
+    <button class="cart-close" onclick="closeCart()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Tổng cộng:</span>
+      <span class="cart-total-val" id="cartTotal">0 ₫</span>
+    </div>
+    <button class="btn-checkout" onclick="openOrderModal()">
+      Đặt hàng ngay →
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRODUCT DETAIL MODAL
+============================================================ -->
+<div class="modal-overlay" id="productModalOverlay" onclick="closeProductModal(event)">
+  <div class="modal-box" id="productModalBox" style="position:relative;">
+    <button class="modal-close" onclick="closeProductModal()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="modal-inner" id="modalInner"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ORDER FORM MODAL
+============================================================ -->
+<div class="modal-overlay" id="orderModalOverlay" onclick="closeOrderModal(event)">
+  <div class="modal-box order-modal" onclick="event.stopPropagation()">
+    <div class="order-modal-inner">
+      <h2 class="order-modal-title">📦 Thông tin đặt hàng</h2>
+      <p class="order-modal-sub">Vui lòng điền đầy đủ thông tin để hoàn tất đơn hàng</p>
+
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label>Họ và tên *</label>
+          <input type="text" id="orderName" placeholder="Nguyễn Văn A" required />
+        </div>
+        <div class="form-row">
+          <label>Số điện thoại *</label>
+          <input type="tel" id="orderPhone" placeholder="0912 345 678" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Địa chỉ giao hàng *</label>
+        <input type="text" id="orderAddress" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" required />
+      </div>
+      <div class="form-row">
+        <label>Ghi chú (không bắt buộc)</label>
+        <textarea id="orderNote" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao..."></textarea>
+      </div>
+
+      <!-- Order Summary -->
+      <div class="order-summary-box">
+        <div class="order-summary-title">📋 Đơn hàng của bạn</div>
+        <div id="orderSummaryItems"></div>
+        <div class="order-total-row">
+          <span class="order-total-label">Tổng tiền:</span>
+          <span class="order-total-val" id="orderSummaryTotal">0 ₫</span>
+        </div>
+      </div>
+
+      <button class="btn-submit-order" id="submitOrderBtn" onclick="submitOrder()">
+        ✅ Xác nhận đặt hàng
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PAYMENT MODAL
+============================================================ -->
+<div class="modal-overlay" id="paymentModalOverlay" onclick="closePaymentModal(event)">
+  <div class="modal-box payment-modal" onclick="event.stopPropagation()">
+    <div class="payment-inner">
+      <h2 class="payment-title">💳 Thanh toán</h2>
+      <p class="payment-sub">Quét mã QR hoặc chuyển khoản theo thông tin bên dưới</p>
+
+      <!-- QR Code (dùng qr-server.com để tạo QR động) -->
+      <div class="qr-wrap">
+        <img id="qrCodeImg" src="" alt="QR Thanh toán" loading="lazy" />
+      </div>
+
+      <!-- Bank info — CHỈNH TẠI ĐÂY -->
+      <div class="bank-info">
+        <div class="bank-info-row">
+          <span class="bank-info-label">Ngân hàng</span>
+          <span class="bank-info-val">Vietcombank</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="bank-info-label">Số tài khoản</span>
+          <span class="bank-info-val" id="bankAccount">1234567890</span>
+          <button class="copy-btn" onclick="copyText('1234567890')">Sao chép</button>
+        </div>
+        <div class="bank-info-row">
+          <span class="bank-info-label">Chủ tài khoản</span>
+          <span class="bank-info-val">NGUYEN VAN A</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="bank-info-label">Số tiền</span>
+          <span class="bank-info-val" id="paymentAmount">0 ₫</span>
+        </div>
+        <div class="bank-info-row">
+          <span class="bank-info-label">Nội dung CK</span>
+          <span class="bank-info-val" id="paymentContent">PHARMACARE ...</span>
+          <button class="copy-btn" onclick="copyPaymentContent()">Sao chép</button>
+        </div>
+      </div>
+
+      <p class="payment-note">⚠️ Vui lòng ghi đúng nội dung chuyển khoản để đơn hàng được xử lý nhanh</p>
+
+      <button class="btn-confirm-paid" onclick="confirmPayment()">
+        ✅ Tôi đã chuyển khoản xong
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SUCCESS MODAL
+============================================================ -->
+<div class="modal-overlay" id="successModalOverlay" onclick="closeSuccessModal(event)">
+  <div class="modal-box success-modal" onclick="event.stopPropagation()">
+    <div class="success-inner">
+      <div class="success-icon">✓</div>
+      <h2 class="success-title">Đặt hàng thành công!</h2>
+      <p class="success-desc">
+        Cảm ơn bạn đã tin tưởng PharmaCare. Chúng tôi sẽ liên hệ xác nhận đơn hàng trong thời gian sớm nhất.
+      </p>
+      <div class="success-order-id" id="successOrderId">Mã đơn: #PH-000000</div>
+      <div class="success-actions">
+        <button class="btn-print" onclick="printInvoice()">🖨️ In hóa đơn</button>
+        <button class="btn-continue" onclick="closeSuccessModal()">Tiếp tục mua sắm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ORDER HISTORY MODAL
+============================================================ -->
+<div class="modal-overlay" id="historyModalOverlay" onclick="closeHistoryModal(event)">
+  <div class="modal-box history-modal" onclick="event.stopPropagation()">
+    <div class="history-inner">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+        <h2 class="history-title" style="margin:0">📋 Lịch sử đơn hàng</h2>
+        <button class="modal-close" style="position:static;box-shadow:none;" onclick="closeHistoryModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div id="historyList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     TOAST NOTIFICATION
+============================================================ -->
+<div id="toast">
+  <span class="toast-icon" id="toastIcon">✓</span>
+  <span class="toast-text" id="toastText">Đã thêm vào giỏ hàng</span>
+</div>
+
+<!-- ============================================================
+     PRINT INVOICE (hidden, for print only)
+============================================================ -->
+<div id="printArea" class="print-invoice"></div>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon">💊</div>
+          PharmaCare
+        </div>
+        <p>Đại lý thuốc uy tín, cung cấp thuốc và thực phẩm chức năng chính hãng. Tư vấn sức khỏe miễn phí 24/7.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">📸</a>
+          <a href="#" class="social-link">🎵</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Sản phẩm</h4>
+        <ul>
+          <li><a href="#">Vitamin & Khoáng chất</a></li>
+          <li><a href="#">Thuốc OTC</a></li>
+          <li><a href="#">Thực phẩm chức năng</a></li>
+          <li><a href="#">Chăm sóc tiêu hóa</a></li>
+          <li><a href="#">Sản phẩm mới</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Tư vấn miễn phí</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+          <li><a href="#">Hướng dẫn sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Liên hệ chúng tôi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#">📍 123 Đường ABC, Hà Nội</a></li>
+          <li><a href="tel:19001234">📞 1900 1234</a></li>
+          <li><a href="mailto:info@pharmacare.vn">✉️ info@pharmacare.vn</a></li>
+          <li><a href="#">⏰ 7:00 – 22:00 hàng ngày</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 PharmaCare. Bảo lưu mọi quyền.</span>
+      <span>Giấy phép kinh doanh: 01234567890</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+/* ════════════════════════════════════════
+   CONFIGURATION — chỉnh sửa tại đây
+════════════════════════════════════════ */
+const CONFIG = {
+  // Google Apps Script Web App URL — thay bằng URL của bạn
+  // Xem hướng dẫn tạo tại: https://developers.google.com/apps-script
+  APPS_SCRIPT_URL: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
+
+  // Thông tin ngân hàng — CHỈNH TẠI ĐÂY
+  BANK_NAME:    'Vietcombank',
+  BANK_ACCOUNT: '1234567890',
+  BANK_OWNER:   'NGUYEN VAN A',
+  BANK_LOGO:    'VCB', // dùng cho QR
+
+  // Tên shop
+  SHOP_NAME: 'PharmaCare',
+  SHOP_PHONE: '1900 1234',
+};
+
+/* ════════════════════════════════════════
+   PRODUCT DATA — chỉnh sửa danh sách sản phẩm tại đây
+════════════════════════════════════════ */
+const PRODUCTS = [
+  {
+    id: 1,
+    name: 'Vitamin C 1000mg',
+    cat: 'vitamin',
+    catLabel: 'Vitamin & Khoáng chất',
+    price: 189000,
+    oldPrice: 240000,
+    badge: 'Bán chạy',
+    badgeClass: '',
+    desc: 'Tăng cường miễn dịch, chống oxy hóa, hỗ trợ làm đẹp da',
+    details: [
+      'Hàm lượng Vitamin C 1000mg/viên',
+      'Dạng sủi bọt dễ uống',
+      'Không chứa đường & gluten',
+      'Hộp 20 viên',
+      'Sản xuất tại Mỹ – FDA approved',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80',
+      'https://images.unsplash.com/photo-1550572017-edd951b55104?w=600&q=80',
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Omega-3 Fish Oil',
+    cat: 'supplement',
+    catLabel: 'Thực phẩm chức năng',
+    price: 320000,
+    oldPrice: null,
+    badge: 'Mới',
+    badgeClass: '',
+    desc: 'Bảo vệ tim mạch, tăng cường trí não và thị lực',
+    details: [
+      'EPA 360mg & DHA 240mg mỗi viên',
+      'Dầu cá tuyết tinh khiết từ Na Uy',
+      'Không có mùi tanh khó chịu',
+      'Lọ 90 viên nang mềm',
+      'Chứng nhận IFOS 5 sao',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80',
+      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?w=600&q=80',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Paracetamol 500mg',
+    cat: 'otc',
+    catLabel: 'Thuốc OTC',
+    price: 25000,
+    oldPrice: 30000,
+    badge: 'Sale',
+    badgeClass: 'sale',
+    desc: 'Giảm đau, hạ sốt hiệu quả trong vòng 30 phút',
+    details: [
+      'Paracetamol 500mg/viên',
+      'Tác dụng nhanh sau 30 phút',
+      'Phù hợp cả trẻ em từ 12 tuổi',
+      'Vỉ 10 viên nén',
+      'Sản xuất tại Việt Nam – GMP-WHO',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1550572017-edd951b55104?w=600&q=80',
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80',
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Vitamin D3 + K2',
+    cat: 'vitamin',
+    catLabel: 'Vitamin & Khoáng chất',
+    price: 265000,
+    oldPrice: null,
+    badge: 'Phổ biến',
+    badgeClass: '',
+    desc: 'Tăng hấp thu canxi, xương chắc khỏe, hỗ trợ miễn dịch',
+    details: [
+      'Vitamin D3 2000IU + K2 MK-7 75mcg',
+      'Dạng nhỏ giọt tiện dùng',
+      'Không màu, không mùi',
+      'Lọ 30ml (60 liều dùng)',
+      'Phù hợp mọi lứa tuổi',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80',
+      'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80',
+      'https://images.unsplash.com/photo-1550572017-edd951b55104?w=600&q=80',
+    ],
+  },
+  {
+    id: 5,
+    name: 'Probiotic Complex 40B',
+    cat: 'digestive',
+    catLabel: 'Tiêu hóa',
+    price: 450000,
+    oldPrice: 550000,
+    badge: 'Sale',
+    badgeClass: 'sale',
+    desc: 'Cân bằng hệ vi sinh đường ruột, cải thiện tiêu hóa',
+    details: [
+      '40 tỷ CFU / viên – 10 chủng lợi khuẩn',
+      'Công nghệ bọc giải phóng chậm',
+      'Không cần bảo quản lạnh',
+      'Lọ 30 viên nang cứng',
+      'Chứng nhận NSF & USP',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
+    ],
+  },
+  {
+    id: 6,
+    name: 'Multivitamin Daily',
+    cat: 'supplement',
+    catLabel: 'Thực phẩm chức năng',
+    price: 380000,
+    oldPrice: null,
+    badge: 'Bán chạy',
+    badgeClass: '',
+    desc: 'Bổ sung 23 vitamin & khoáng chất thiết yếu mỗi ngày',
+    details: [
+      '23 vi chất: Vitamin A, B, C, D, E, K, Sắt, Kẽm...',
+      'Viên nén bao phim dễ nuốt',
+      'Không tạo cảm giác buồn nôn',
+      'Lọ 60 viên (dùng 2 tháng)',
+      'Sản xuất theo tiêu chuẩn GMP châu Âu',
+    ],
+    images: [
+      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?w=600&q=80',
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+      'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=600&q=80',
+    ],
+  },
+];
+
+/* ════════════════════════════════════════
+   STATE
+════════════════════════════════════════ */
+let cart = JSON.parse(localStorage.getItem('pc_cart') || '[]');
+let history = JSON.parse(localStorage.getItem('pc_history') || '[]');
+let currentCat = 'all';
+let currentSearch = '';
+let currentProductId = null;
+let currentOrderId = null;
+
+/* ════════════════════════════════════════
+   HELPERS
+════════════════════════════════════════ */
+const fmt = n => n.toLocaleString('vi-VN') + ' ₫';
+const genOrderId = () => 'PH-' + Date.now().toString().slice(-6);
+
+function saveCart() { localStorage.setItem('pc_cart', JSON.stringify(cart)); }
+function saveHistory() { localStorage.setItem('pc_history', JSON.stringify(history)); }
+
+/* ════════════════════════════════════════
+   RENDER PRODUCTS
+════════════════════════════════════════ */
+function renderProducts() {
+  const grid = document.getElementById('productsGrid');
+  const filtered = PRODUCTS.filter(p => {
+    const matchCat = currentCat === 'all' || p.cat === currentCat;
+    const matchSearch = p.name.toLowerCase().includes(currentSearch) ||
+                        p.desc.toLowerCase().includes(currentSearch) ||
+                        p.catLabel.toLowerCase().includes(currentSearch);
+    return matchCat && matchSearch;
+  });
+
+  if (!filtered.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--gray-400)">
+      <div style="font-size:48px;margin-bottom:12px">🔍</div>
+      <p>Không tìm thấy sản phẩm phù hợp</p>
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => `
+    <div class="product-card reveal" onclick="openProductModal(${p.id})">
+      <div class="product-img-wrap">
+        <img src="${p.images[0]}" alt="${p.name}" loading="lazy" />
+        ${p.badge ? `<span class="product-badge ${p.badgeClass}">${p.badge}</span>` : ''}
+      </div>
+      <div class="product-body">
+        <div class="product-cat">${p.catLabel}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-desc">${p.desc}</div>
+        <div class="product-footer">
+          <div>
+            <div class="product-price">${fmt(p.price)}</div>
+            ${p.oldPrice ? `<div class="product-price-old">${fmt(p.oldPrice)}</div>` : ''}
+          </div>
+          <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart(${p.id})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Thêm
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // re-attach reveal observer
+  observeReveal();
+}
+
+/* ════════════════════════════════════════
+   FILTER & SEARCH
+════════════════════════════════════════ */
+function setCategory(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts();
+}
+
+function filterProducts() {
+  currentSearch = document.getElementById('searchInput').value.toLowerCase();
+  renderProducts();
+}
+function filterProductsMobile() {
+  currentSearch = document.getElementById('mobileSearchInput').value.toLowerCase();
+  renderProducts();
+}
+
+/* ════════════════════════════════════════
+   CART
+════════════════════════════════════════ */
+function addToCart(id, qty = 1) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const existing = cart.find(x => x.id === id);
+  if (existing) existing.qty += qty;
+  else cart.push({ id, qty });
+  saveCart();
+  updateCartUI();
+  showToast(`✓ Đã thêm "${p.name}" vào giỏ`);
+  bumpBadge();
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(x => x.id !== id);
+  saveCart();
+  updateCartUI();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) removeFromCart(id);
+  else { saveCart(); updateCartUI(); }
+}
+
+function getCartTotal() {
+  return cart.reduce((sum, c) => {
+    const p = PRODUCTS.find(x => x.id === c.id);
+    return sum + (p ? p.price * c.qty : 0);
+  }, 0);
+}
+
+function getCartCount() {
+  return cart.reduce((s, c) => s + c.qty, 0);
+}
+
+function updateCartUI() {
+  // Badge
+  const count = getCartCount();
+  const badge = document.getElementById('cartBadge');
+  badge.textContent = count;
+  badge.style.display = count ? 'flex' : 'none';
+
+  // Items
+  const items = document.getElementById('cartItems');
+  if (!cart.length) {
+    items.innerHTML = `<div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Giỏ hàng của bạn đang trống</p>
+    </div>`;
+  } else {
+    items.innerHTML = cart.map(c => {
+      const p = PRODUCTS.find(x => x.id === c.id);
+      if (!p) return '';
+      return `<div class="cart-item">
+        <img class="cart-item-img" src="${p.images[0]}" alt="${p.name}" loading="lazy" />
+        <div class="cart-item-info">
+          <div class="cart-item-name">${p.name}</div>
+          <div class="cart-item-price">${fmt(p.price * c.qty)}</div>
+          <div class="cart-qty-row">
+            <button class="qty-btn" onclick="changeQty(${p.id}, -1)">−</button>
+            <span class="qty-val">${c.qty}</span>
+            <button class="qty-btn" onclick="changeQty(${p.id}, 1)">+</button>
+          </div>
+        </div>
+        <button class="cart-item-del" onclick="removeFromCart(${p.id})">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+      </div>`;
+    }).join('');
+  }
+
+  // Total
+  document.getElementById('cartTotal').textContent = fmt(getCartTotal());
+}
+
+function bumpBadge() {
+  const badge = document.getElementById('cartBadge');
+  badge.classList.remove('bump');
+  void badge.offsetWidth; // reflow
+  badge.classList.add('bump');
+}
+
+/* ════════════════════════════════════════
+   CART SIDEBAR OPEN/CLOSE
+════════════════════════════════════════ */
+function openCart() {
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartSidebar').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartSidebar').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ════════════════════════════════════════
+   PRODUCT DETAIL MODAL
+════════════════════════════════════════ */
+let modalQtyVal = 1;
+
+function openProductModal(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  currentProductId = id;
+  modalQtyVal = 1;
+
+  document.getElementById('modalInner').innerHTML = `
+    <div class="modal-gallery">
+      <img class="modal-main-img" id="modalMainImg" src="${p.images[0]}" alt="${p.name}" />
+      <div class="modal-thumbs">
+        ${p.images.map((img, i) => `
+          <img class="modal-thumb ${i === 0 ? 'active' : ''}" src="${img}" alt="${p.name} ${i+1}"
+               onclick="setModalImg('${img}', this)" loading="lazy" />
+        `).join('')}
+      </div>
+    </div>
+    <div class="modal-info">
+      <div class="modal-cat">${p.catLabel}</div>
+      <h2 class="modal-name">${p.name}</h2>
+      <div class="modal-price">
+        ${fmt(p.price)}
+        ${p.oldPrice ? `<span style="font-size:16px;color:var(--gray-400);text-decoration:line-through;margin-left:10px">${fmt(p.oldPrice)}</span>` : ''}
+      </div>
+      <p class="modal-desc">${p.desc}</p>
+      <ul class="modal-detail-list">
+        ${p.details.map(d => `<li>${d}</li>`).join('')}
+      </ul>
+      <div class="modal-qty-row">
+        <div class="modal-qty-ctrl">
+          <button class="qty-btn" onclick="changeModalQty(-1)">−</button>
+          <span class="modal-qty-val" id="modalQtyDisplay">1</span>
+          <button class="qty-btn" onclick="changeModalQty(1)">+</button>
+        </div>
+        <button class="btn-modal-cart" onclick="addToCart(${p.id}, modalQtyVal); closeProductModal()">
+          🛒 Thêm vào giỏ hàng
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('productModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function setModalImg(src, el) {
+  document.getElementById('modalMainImg').src = src;
+  document.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function changeModalQty(delta) {
+  modalQtyVal = Math.max(1, modalQtyVal + delta);
+  document.getElementById('modalQtyDisplay').textContent = modalQtyVal;
+}
+
+function closeProductModal(e) {
+  if (e && e.target !== document.getElementById('productModalOverlay')) return;
+  document.getElementById('productModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ════════════════════════════════════════
+   ORDER MODAL
+════════════════════════════════════════ */
+function openOrderModal() {
+  if (!cart.length) { showToast('⚠️ Giỏ hàng đang trống!', 'warning'); return; }
+  closeCart();
+
+  // Fill summary
+  document.getElementById('orderSummaryItems').innerHTML = cart.map(c => {
+    const p = PRODUCTS.find(x => x.id === c.id);
+    return p ? `<div class="order-sum-item">
+      <span>${p.name} × ${c.qty}</span>
+      <span>${fmt(p.price * c.qty)}</span>
+    </div>` : '';
+  }).join('');
+  document.getElementById('orderSummaryTotal').textContent = fmt(getCartTotal());
+
+  document.getElementById('orderModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOrderModal(e) {
+  if (e && e.target !== document.getElementById('orderModalOverlay')) return;
+  document.getElementById('orderModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ════════════════════════════════════════
+   SUBMIT ORDER
+════════════════════════════════════════ */
+async function submitOrder() {
+  const name    = document.getElementById('orderName').value.trim();
+  const phone   = document.getElementById('orderPhone').value.trim();
+  const address = document.getElementById('orderAddress').value.trim();
+  const note    = document.getElementById('orderNote').value.trim();
+
+  if (!name || !phone || !address) {
+    showToast('⚠️ Vui lòng điền đầy đủ thông tin!', 'warning'); return;
+  }
+
+  const orderId = genOrderId();
+  currentOrderId = orderId;
+  const total = getCartTotal();
+  const items = cart.map(c => {
+    const p = PRODUCTS.find(x => x.id === c.id);
+    return p ? `${p.name} x${c.qty} (${fmt(p.price * c.qty)})` : '';
+  }).filter(Boolean).join('; ');
+
+  const orderData = {
+    orderId, name, phone, address, note,
+    items,
+    total: fmt(total),
+    timestamp: new Date().toLocaleString('vi-VN'),
+  };
+
+  // Disable button & show spinner
+  const btn = document.getElementById('submitOrderBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Đang xử lý...';
+
+  // Send to Google Sheets via Apps Script
+  try {
+    await fetch(CONFIG.APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Apps Script requires no-cors
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(orderData),
+    });
+  } catch (_) {
+    // no-cors won't throw, just continue
+  }
+
+  // Save to local history
+  const historyEntry = {
+    ...orderData,
+    totalRaw: total,
+    cartSnapshot: JSON.parse(JSON.stringify(cart)),
+    status: 'Đang xử lý',
+  };
+  history.unshift(historyEntry);
+  saveHistory();
+
+  btn.disabled = false;
+  btn.innerHTML = '✅ Xác nhận đặt hàng';
+
+  // Close order modal, open payment modal
+  document.getElementById('orderModalOverlay').classList.remove('open');
+  openPaymentModal(orderId, total);
+}
+
+/* ════════════════════════════════════════
+   PAYMENT MODAL
+════════════════════════════════════════ */
+function openPaymentModal(orderId, total) {
+  const content = `${CONFIG.SHOP_NAME} ${orderId}`;
+  document.getElementById('paymentAmount').textContent = fmt(total);
+  document.getElementById('paymentContent').textContent = content;
+
+  // Generate QR via VietQR API (free, no key needed)
+  const qrData = encodeURIComponent(
+    `https://img.vietqr.io/image/VCB-${CONFIG.BANK_ACCOUNT}-compact2.png?amount=${total}&addInfo=${encodeURIComponent(content)}&accountName=${encodeURIComponent(CONFIG.BANK_OWNER)}`
+  );
+  document.getElementById('qrCodeImg').src =
+    `https://img.vietqr.io/image/VCB-${CONFIG.BANK_ACCOUNT}-compact2.png?amount=${total}&addInfo=${encodeURIComponent(content)}&accountName=${encodeURIComponent(CONFIG.BANK_OWNER)}`;
+
+  document.getElementById('paymentModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePaymentModal(e) {
+  if (e && e.target !== document.getElementById('paymentModalOverlay')) return;
+  document.getElementById('paymentModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function confirmPayment() {
+  document.getElementById('paymentModalOverlay').classList.remove('open');
+  showSuccessModal();
+  // Clear cart
+  cart = [];
+  saveCart();
+  updateCartUI();
+}
+
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => showToast('✓ Đã sao chép!'));
+}
+
+function copyPaymentContent() {
+  const content = document.getElementById('paymentContent').textContent;
+  copyText(content);
+}
+
+/* ════════════════════════════════════════
+   SUCCESS MODAL
+════════════════════════════════════════ */
+function showSuccessModal() {
+  document.getElementById('successOrderId').textContent = `Mã đơn: #${currentOrderId}`;
+  document.getElementById('successModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSuccessModal(e) {
+  if (e && e.target !== document.getElementById('successModalOverlay')) return;
+  if (!e) {
+    document.getElementById('successModalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  } else {
+    document.getElementById('successModalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+
+/* ════════════════════════════════════════
+   ORDER HISTORY
+════════════════════════════════════════ */
+function showHistoryModal() {
+  const list = document.getElementById('historyList');
+  if (!history.length) {
+    list.innerHTML = '<div class="history-empty">Chưa có đơn hàng nào</div>';
+  } else {
+    list.innerHTML = history.map(h => `
+      <div class="history-item">
+        <div class="history-meta">
+          <span class="history-id">Mã đơn: #${h.orderId}</span>
+          <span class="history-date">🕐 ${h.timestamp}</span>
+          <span class="history-status">${h.status}</span>
+        </div>
+        <div style="font-size:13px;color:var(--gray-700);margin-bottom:4px">
+          👤 ${h.name} — 📞 ${h.phone}
+        </div>
+        <div class="history-products">📦 ${h.items}</div>
+        <div class="history-total">${h.total}</div>
+        <div class="history-actions">
+          <button class="btn-sm" onclick="printHistoryInvoice('${h.orderId}')">🖨️ In hóa đơn</button>
+        </div>
+      </div>
+    `).join('');
+  }
+  document.getElementById('historyModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeHistoryModal(e) {
+  if (e && e.target !== document.getElementById('historyModalOverlay')) return;
+  document.getElementById('historyModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ════════════════════════════════════════
+   PRINT INVOICE
+════════════════════════════════════════ */
+function printInvoice() {
+  printHistoryInvoice(currentOrderId);
+}
+
+function printHistoryInvoice(orderId) {
+  const h = history.find(x => x.orderId === orderId);
+  if (!h) return;
+
+  const invoiceHTML = `
+    <html><head>
+    <title>Hóa đơn #${h.orderId}</title>
+    <style>
+      body { font-family: 'DM Sans', Arial, sans-serif; font-size: 13px; color: #333; padding: 30px; }
+      .logo { font-size: 22px; font-weight: 800; color: #0D3321; margin-bottom: 4px; }
+      .header { border-bottom: 2px solid #0D3321; padding-bottom: 16px; margin-bottom: 20px; }
+      h2 { font-size: 18px; color: #0D3321; margin: 0 0 4px; }
+      .meta { font-size: 12px; color: #666; }
+      .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+      .info-box { background: #f9f9f9; padding: 14px; border-radius: 8px; }
+      .info-box h4 { font-size: 12px; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+      table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+      th { background: #0D3321; color: #fff; padding: 8px 12px; text-align: left; font-size: 12px; }
+      td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+      .total-row { font-weight: 800; font-size: 16px; color: #0D3321; }
+      .footer-note { font-size: 12px; color: #888; text-align: center; margin-top: 20px; border-top: 1px solid #eee; padding-top: 16px; }
+    </style>
+    </head><body>
+    <div class="header">
+      <div class="logo">💊 ${CONFIG.SHOP_NAME}</div>
+      <div style="font-size:12px;color:#888">${CONFIG.SHOP_PHONE} | info@pharmacare.vn</div>
+    </div>
+    <h2>HÓA ĐƠN ĐẶT HÀNG</h2>
+    <div class="meta">Mã đơn: <strong>#${h.orderId}</strong> &nbsp;|&nbsp; Ngày: ${h.timestamp} &nbsp;|&nbsp; Trạng thái: <strong>${h.status}</strong></div>
+    <br/>
+    <div class="info-grid">
+      <div class="info-box">
+        <h4>Khách hàng</h4>
+        <strong>${h.name}</strong><br/>${h.phone}
+      </div>
+      <div class="info-box">
+        <h4>Địa chỉ giao hàng</h4>
+        ${h.address}${h.note ? `<br/><em>${h.note}</em>` : ''}
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>Sản phẩm</th><th>Số lượng</th><th>Đơn giá</th><th>Thành tiền</th></tr></thead>
+      <tbody>
+        ${(h.cartSnapshot || []).map(c => {
+          const p = PRODUCTS.find(x => x.id === c.id);
+          return p ? `<tr>
+            <td>${p.name}</td><td>${c.qty}</td>
+            <td>${fmt(p.price)}</td><td>${fmt(p.price * c.qty)}</td>
+          </tr>` : '';
+        }).join('')}
+      </tbody>
+      <tfoot>
+        <tr class="total-row"><td colspan="3" style="text-align:right">TỔNG CỘNG:</td><td>${h.total}</td></tr>
+      </tfoot>
+    </table>
+    <div class="footer-note">
+      Cảm ơn bạn đã tin tưởng ${CONFIG.SHOP_NAME}! 🌿<br/>
+      Mọi thắc mắc vui lòng liên hệ: ${CONFIG.SHOP_PHONE}
+    </div>
+    </body></html>
+  `;
+
+  const win = window.open('', '_blank');
+  win.document.write(invoiceHTML);
+  win.document.close();
+  win.focus();
+  setTimeout(() => win.print(), 400);
+}
+
+/* ════════════════════════════════════════
+   TOAST
+════════════════════════════════════════ */
+let toastTimer;
+function showToast(msg, type = 'success') {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastText').textContent = msg;
+  toast.style.background = type === 'warning' ? '#92400E' : 'var(--green-dark)';
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+/* ════════════════════════════════════════
+   HEADER SCROLL EFFECT
+════════════════════════════════════════ */
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* ════════════════════════════════════════
+   MOBILE NAV
+════════════════════════════════════════ */
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+function toggleMobileSearch() {
+  document.getElementById('mobileSearchBar').classList.toggle('hidden');
+}
+
+/* ════════════════════════════════════════
+   SMOOTH SCROLL
+════════════════════════════════════════ */
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ════════════════════════════════════════
+   REVEAL ON SCROLL (Intersection Observer)
+════════════════════════════════════════ */
+function observeReveal() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        // stagger delay
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (!el.classList.contains('visible')) io.observe(el);
+  });
+}
+
+/* ════════════════════════════════════════
+   KEYBOARD NAVIGATION
+════════════════════════════════════════ */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeProductModal();
+    closeOrderModal();
+    closePaymentModal();
+    closeSuccessModal();
+    closeHistoryModal();
+    closeCart();
+    closeMobileNav();
+  }
+});
+
+/* ════════════════════════════════════════
+   INIT
+════════════════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+  updateCartUI();
+  observeReveal();
+});
+</script>
+
+<!-- ============================================================
+     GOOGLE APPS SCRIPT SETUP GUIDE (comment, remove in production)
+     
+     Để kết nối Google Sheets:
+     1. Mở script.google.com → Tạo project mới
+     2. Dán code sau vào:
+     
+     function doPost(e) {
+       var sheet = SpreadsheetApp.openById('YOUR_SHEET_ID').getSheetByName('Orders');
+       var data = JSON.parse(e.postData.contents);
+       sheet.appendRow([
+         data.orderId, data.timestamp, data.name, data.phone,
+         data.address, data.items, data.total, data.note, 'Mới'
+       ]);
+       return ContentService.createTextOutput(JSON.stringify({status:'ok'}))
+         .setMimeType(ContentService.MimeType.JSON);
+     }
+     
+     3. Deploy → Web app → Anyone → Copy URL → dán vào CONFIG.APPS_SCRIPT_URL
+============================================================ -->
+
+</body>
+</html>
